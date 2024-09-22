@@ -9,6 +9,7 @@ from keyboards.inline.car_check_inline import ask_add_car_photo, end_ask_add_car
 from loader import dp
 from states.userState import CarCheckStates
 from utils.api.service import MachineCheckService, FaceCheckService
+from utils.misc.check_photo import get_image_taken_time, is_taken_within_last_30_minutes
 
 
 @dp.message_handler(IsPrivate(), text="🔙Ortga")
@@ -74,19 +75,48 @@ async def car_check_start(message: types.Message, state: FSMContext):
     await state.update_data(images=[])
 
 
+@dp.message_handler(IsPrivate(), content_types=['document'], state=CarCheckStates.waiting_for_images)
+async def car_check_start(message: types.Message, state: FSMContext):
+    user_data = await state.get_data()
+    file_name = f"photos/{message.from_user.id}.jpg"
+    await message.document.download(destination_file=file_name)
+    result = is_taken_within_last_30_minutes(image_path=f"{file_name}")
+    if result:
+        images = user_data.get('images', [])
+        if len(images) >= 5:
+            await message.answer(f"{len(images)}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!",
+                                 reply_markup=end_ask_add_car_photo)
+        else:
+            # Add the new image file_id to the list
+            images.append(message.document.file_id)
+            # Update the state with the new list
+            await state.update_data(images=images)
+            await message.answer(f"{len(images)}/5 rasmlar yuklandi.", reply_markup=ask_add_car_photo)
+    else:
+        await message.answer("Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm "
+                             "yuboring!")
+
+
 @dp.message_handler(IsPrivate(), content_types=['photo'], state=CarCheckStates.waiting_for_images)
 async def car_check_start(message: types.Message, state: FSMContext):
     user_data = await state.get_data()
-    images = user_data.get('images', [])
-    if len(images) >= 5:
-        await message.answer(f"{len(images)}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!",
-                             reply_markup=end_ask_add_car_photo)
+    file_name = f"photos/{message.from_user.id}.jpg"
+    await message.photo[-1].download(destination_file=file_name)
+    result = is_taken_within_last_30_minutes(image_path=f"{file_name}")
+    if result:
+        images = user_data.get('images', [])
+        if len(images) >= 5:
+            await message.answer(f"{len(images)}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!",
+                                 reply_markup=end_ask_add_car_photo)
+        else:
+            # Add the new image file_id to the list
+            images.append(message.photo[-1].file_id)
+            # Update the state with the new list
+            await state.update_data(images=images)
+            await message.answer(f"{len(images)}/5 rasmlar yuklandi.", reply_markup=ask_add_car_photo)
     else:
-        # Add the new image file_id to the list
-        images.append(message.photo[-1].file_id)
-        # Update the state with the new list
-        await state.update_data(images=images)
-        await message.answer(f"{len(images)}/5 rasmlar yuklandi.", reply_markup=ask_add_car_photo)
+        await message.answer("Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm "
+                             "yuboring!")
 
 
 @dp.callback_query_handler(ChatTypeFilter(chat_type=types.ChatType.PRIVATE), state=CarCheckStates.waiting_for_images)
@@ -101,10 +131,9 @@ async def car_check_start(call: types.CallbackQuery, state: FSMContext):
         images = user_data.get('images')
         # Create media group
         media = types.MediaGroup()
-        for i in images[:-1]:
-            media.attach_photo(i)
+        for i in images:
+            media.attach_document(i)
         text = f"<b>User ID: <code>{call.from_user.id}</code> \nTekshiruv: 🚕 Moshina Tekshiruvi</b>"
-        media.attach_photo(images[-1])
         await call.message.bot.send_media_group(chat_id=SUPPORT_TEAM_GROUP_CAR, media=media)
         await call.message.bot.send_message(chat_id=SUPPORT_TEAM_GROUP_CAR, text=text,
                                             reply_markup=admin_check_photo_btn)

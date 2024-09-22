@@ -1,5 +1,6 @@
 from PIL import Image
 from PIL.ExifTags import TAGS
+from datetime import datetime, timedelta
 
 
 def get_image_taken_time(image_path):
@@ -16,16 +17,30 @@ def get_image_taken_time(image_path):
         }
         # Rasmning olingan vaqtini olish
         taken_time = exif.get("DateTimeOriginal")
-        return taken_time
+
+        if taken_time:
+            # Rasm vaqti 'YYYY:MM:DD HH:MM:SS' formatida bo'ladi, shuni datetime ob'ektiga aylantiramiz
+            image_time = datetime.strptime(taken_time, '%Y:%m:%d %H:%M:%S')
+            return image_time
+        else:
+            return "Olingan vaqt topilmadi."
     else:
         return "EXIF ma'lumotlari topilmadi."
 
 
-# Rasm yo'lini kiriting
-image_path = 'rasm.jpg'
-time_taken = get_image_taken_time(image_path)
+def is_taken_within_last_30_minutes(image_path):
+    # Rasmning olingan vaqtini olish
+    taken_time = get_image_taken_time(image_path)
+    if isinstance(taken_time, datetime):
+        # Hozirgi vaqtni olish
+        now = datetime.now()
+        # Agar rasm so'nggi 30 daqiqada olingan bo'lsa
+        if now - timedelta(minutes=30) <= taken_time <= now:
+            return True
+        else:
+            return False
+    else:
+        # EXIF ma'lumotlari topilmagan bo'lsa, False qaytarish
+        return False
 
-if time_taken:
-    print(f"Rasm olingan vaqti: {time_taken}")
-else:
-    print("Olingan vaqt topilmadi.")
+
