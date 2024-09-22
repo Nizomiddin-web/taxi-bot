@@ -1,3 +1,5 @@
+import os
+
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import ChatTypeFilter
@@ -78,45 +80,55 @@ async def car_check_start(message: types.Message, state: FSMContext):
 @dp.message_handler(IsPrivate(), content_types=['document'], state=CarCheckStates.waiting_for_images)
 async def car_check_start(message: types.Message, state: FSMContext):
     user_data = await state.get_data()
+    images = user_data.get('images', [])
+    if len(images) >= 5:
+        await message.answer(f"{len(images)}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!",
+                             reply_markup=end_ask_add_car_photo)
+        return
     file_name = f"photos/{message.from_user.id}.jpg"
     await message.document.download(destination_file=file_name)
     result = is_taken_within_last_30_minutes(image_path=f"{file_name}")
     if result:
-        images = user_data.get('images', [])
-        if len(images) >= 5:
-            await message.answer(f"{len(images)}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!",
-                                 reply_markup=end_ask_add_car_photo)
-        else:
-            # Add the new image file_id to the list
-            images.append(message.document.file_id)
-            # Update the state with the new list
-            await state.update_data(images=images)
-            await message.answer(f"{len(images)}/5 rasmlar yuklandi.", reply_markup=ask_add_car_photo)
+        # Add the new image file_id to the list
+        images.append(message.document.file_id)
+        # Update the state with the new list
+        await state.update_data(images=images)
+        await message.answer(f"{len(images)}/5 rasmlar yuklandi.", reply_markup=ask_add_car_photo)
     else:
         await message.answer("Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm "
                              "yuboring!")
+    try:
+        os.remove(file_name)
+    except:
+        pass
 
 
 @dp.message_handler(IsPrivate(), content_types=['photo'], state=CarCheckStates.waiting_for_images)
 async def car_check_start(message: types.Message, state: FSMContext):
-    user_data = await state.get_data()
-    file_name = f"photos/{message.from_user.id}.jpg"
-    await message.photo[-1].download(destination_file=file_name)
-    result = is_taken_within_last_30_minutes(image_path=f"{file_name}")
-    if result:
-        images = user_data.get('images', [])
-        if len(images) >= 5:
-            await message.answer(f"{len(images)}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!",
-                                 reply_markup=end_ask_add_car_photo)
-        else:
-            # Add the new image file_id to the list
-            images.append(message.photo[-1].file_id)
-            # Update the state with the new list
-            await state.update_data(images=images)
-            await message.answer(f"{len(images)}/5 rasmlar yuklandi.", reply_markup=ask_add_car_photo)
-    else:
-        await message.answer("Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm "
-                             "yuboring!")
+    await message.answer("Rasmlarni document(file) shaklida yuboring!")
+    # user_data = await state.get_data()
+    # file_name = f"photos/{message.from_user.id}.jpg"
+    # await message.photo[-1].download(destination_file=file_name)
+    # result = is_taken_within_last_30_minutes(image_path=f"{file_name}")
+    # if result:
+    #     images = user_data.get('images', [])
+    #     if len(images) >= 5:
+    #         await message.answer(f"{len(images)}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!",
+    #                              reply_markup=end_ask_add_car_photo)
+    #     else:
+    #         # Add the new image file_id to the list
+    #         images.append(message.photo[-1].file_id)
+    #         # Update the state with the new list
+    #         await state.update_data(images=images)
+    #         await message.answer(f"{len(images)}/5 rasmlar yuklandi.", reply_markup=ask_add_car_photo)
+    # else:
+    #     await message.answer("Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm "
+    #                          "yuboring!")
+    # try:
+    #     os.remove(file_name)
+    #     print("o'chdi")
+    # except:
+    #     pass
 
 
 @dp.callback_query_handler(ChatTypeFilter(chat_type=types.ChatType.PRIVATE), state=CarCheckStates.waiting_for_images)
