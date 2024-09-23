@@ -36,8 +36,18 @@ async def car_check_start(message: types.Message):
         if result_machine.status_code == 200 and result_face.status_code == 200:
             result_machine = result_machine.json()
             result_face = result_face.json()
-            status_machine_text = "Tasdiqlangan✅" if result_machine['status'] == 'approved' else "Rad etilgan❌"
-            status_face_text = "Tasdiqlangan✅" if result_machine['status'] == 'approved' else "Rad etilgan❌"
+            status_machine_text = (
+                "Tasdiqlashga yuborilmagan" if result_machine['status'] == 'not_submitted' else
+                "Tekshirilmoqda" if result_machine['status'] == 'pending' else
+                "Tasdiqlangan✅" if result_machine['status'] == 'approved' else
+                "Rad etilgan❌"
+            )
+            status_face_text = (
+                "Tasdiqlashga yuborilmagan" if result_face['status'] == 'not_submitted' else
+                "Tekshirilmoqda" if result_face['status'] == 'pending' else
+                "Tasdiqlangan✅" if result_face['status'] == 'approved' else
+                "Rad etilgan❌"
+            )
             text = f"<b>Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine_text}\nSababi: {result_machine['rejection_reason'] or ''}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face_text}\nSababi: {result_face['rejection_reason'] or ''}</b>"
             await message.reply(text=text)
         else:
