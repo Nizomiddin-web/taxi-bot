@@ -254,3 +254,55 @@ msgstr "<b>Ohirgi 10 kunlik to'lovlar\n\n👤User ID:</b>{user_id}\n"
 
 msgid "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {date} {time}\n\n"
 msgstr "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {date} {time}\n\n"
+
+msgid "Tekshiruvni tanlang 👇"
+msgstr "Tekshiruvni tanlang 👇"
+
+msgid "To'lovingiz muvaffaqiyatli amalga oshirildi! Miqdor: {amount} {currency}."
+msgstr "To'lovingiz muvaffaqiyatli amalga oshirildi! Miqdor: {amount} {currency}."
+
+msgid "Ma'lumotlar serverga saqlanmadi\nTo'lov haqida adminlarga murojat qiling!!"
+msgstr "Ma'lumotlar serverga saqlanmadi\nTo'lov haqida adminlarga murojat qiling!!"
+
+msgid "Kunlik Obuna"
+msgstr "Kunlik Obuna"
+
+msgid "Kunlik obuna uchun to'lovni amalga oshiring."
+msgstr "Kunlik obuna uchun to'lovni amalga oshiring."
+
+msgid "Oylik Obuna"
+msgstr "Oylik Obuna"
+
+msgid "Oylik obuna uchun to'lovni amalga oshiring."
+msgstr "Oylik obuna uchun to'lovni amalga oshiring."
+
+msgid "Server xatoligi!!!"
+msgstr "Server xatoligi!!!"
+
+msgid "Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning hisob-fakturangiz:"
+msgstr "Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning hisob-fakturangiz:"
+
+msgid "<b>Iltimos, moshina rasmlarini yuboring (5 tagacha).\n\nNamuna sifatida quyidagi rasmga qarang☝️\n\n❗️Eslatma: Rasmlarni 1 tadan yuboring!</b>"
+msgstr "<b>Iltimos, moshina rasmlarini yuboring (5 tagacha).\n\nNamuna sifatida quyidagi rasmga qarang☝️\n\n❗️Eslatma: Rasmlarni 1 tadan yuboring!</b>"
+
+msgid "Ism:"
+msgstr "Ism:"
+
+msgid "Familiya:"
+msgstr "Familiya:"
+
+msgid "Telefon:"
+msgstr "📱Telefon:"
+
+msgid "Balance:"
+msgstr "💰Balance:"
+
+msgid "Kiritilmagan!"
+msgstr "Kiritilmagan!"
+
+msgid "Tasdiqlashga yuborilgan"
+msgstr "Tasdiqlashga yuborilgan"
+
+msgid "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
+msgstr "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
+

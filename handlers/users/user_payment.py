@@ -68,18 +68,18 @@ async def user_payment(call: types.CallbackQuery):
     }
     payload = json.dumps(payload_data)  # Convert dictionary to JSON string
 
-    prices = [types.LabeledPrice(label="Kunlik Obuna", amount=int(float(amount)) * 100)]  # 100 so'm = 1 UZS
+    prices = [types.LabeledPrice(label=_("Kunlik Obuna"), amount=int(float(amount)) * 100)]  # 100 so'm = 1 UZS
 
     await call.message.edit_text(
-        "Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning "
-        "hisob-fakturangiz:",
+        _("Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning "
+        "hisob-fakturangiz:"),
         parse_mode='Markdown'
     )
 
     await bot.send_invoice(
         call.from_user.id,
-        title="Kunlik Obuna",
-        description="Kunlik obuna uchun to'lovni amalga oshiring.",
+        title=_("Kunlik Obuna"),
+        description=_("Kunlik obuna uchun to'lovni amalga oshiring."),
         provider_token=CLICK_PROVIDER_TOKEN,
         currency='UZS',  # Payme API uses UZS for Uzbek sums
         photo_url="https://telegra.ph/file/d08ff863531f10bf2ea4b.jpg",  # example image
@@ -98,7 +98,7 @@ async def user_payment(call: types.CallbackQuery):
     user_id = call.from_user.id
     amounts = AmountService.get_amount(payment_type="monthly")
     if not amounts:
-        await call.message.answer("Server xatoligi!!!")
+        await call.message.answer(_("Server xatoligi!!!"))
         return
     amount = amounts[0]['amount']
     payment_type = amounts[0]['id']
@@ -111,18 +111,18 @@ async def user_payment(call: types.CallbackQuery):
     }
     payload = json.dumps(payload_data)  # Convert dictionary to JSON string
 
-    prices = [types.LabeledPrice(label="Oylik Obuna", amount=int(float(amount)) * 100)]  # 100 so'm = 1 UZS
+    prices = [types.LabeledPrice(label=_("Oylik Obuna"), amount=int(float(amount)) * 100)]  # 100 so'm = 1 UZS
 
     await call.message.edit_text(
-        "Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning "
-        "hisob-fakturangiz:",
+        _("Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning "
+        "hisob-fakturangiz:"),
         parse_mode='Markdown'
     )
 
     await bot.send_invoice(
         call.from_user.id,
-        title="Oylik Obuna",
-        description="Oylik obuna uchun to'lovni amalga oshiring.",
+        title=_("Oylik Obuna"),
+        description=_("Oylik obuna uchun to'lovni amalga oshiring."),
         provider_token=CLICK_PROVIDER_TOKEN,
         currency='UZS',  # Payme API uses UZS for Uzbek sums
         photo_url="https://telegra.ph/file/d08ff863531f10bf2ea4b.jpg",  # example image
@@ -150,8 +150,11 @@ async def successful_payment(message: types.Message):
     if result.status_code == 201:
         await bot.send_message(
             message.chat.id,
-            f"To'lovingiz muvaffaqiyatli amalga oshirildi! Miqdor: {message.successful_payment.total_amount / 100} {message.successful_payment.currency}.",
+            _("To'lovingiz muvaffaqiyatli amalga oshirildi! Miqdor: {amount} {currency}.").format(
+                amount=message.successful_payment.total_amount / 100,
+                currency=message.successful_payment.currency
+            ),
             parse_mode='Markdown'
         )
     else:
-        await message.answer("Ma'lumotlar serverga saqlanmadi\nTo'lov haqida adminlarga murojat qiling!!")
+        await message.answer(_("Ma'lumotlar serverga saqlanmadi\nTo'lov haqida adminlarga murojat qiling!!"))

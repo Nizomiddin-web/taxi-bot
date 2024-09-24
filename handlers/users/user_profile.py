@@ -18,10 +18,23 @@ async def user_profile(message: types.Message):
     i18n.ctx_locale.set(user_bot.lang)
     try:
         user_info = UserService.get_user(tg_id=message.from_user.id)
-        profile_info = f"<b>Ism:</b> {user_info['first_name'] or 'Kiritilmagan!'}\n" \
-                       f"<b>Familiya:</b> {user_info['last_name'] or 'Kiritilmagan!'}\n" \
-                       f"<b>📱Telefon:</b> {user_info['country_code'] or ''}{user_info['phone_number']}\n" \
-                       f"<b>💰Balance:</b> {user_info['balance']} so'm\n"
+        profile_info = (
+            "<b>{name_label}</b> {first_name}\n"
+            "<b>{surname_label}</b> {last_name}\n"
+            "<b>{phone_label}</b> {country_code}{phone_number}\n"
+            "<b>{balance_label}</b> {balance} so'm\n"
+        ).format(
+            name_label=_("Ism:"),
+            surname_label=_("Familiya:"),
+            phone_label=_("Telefon:"),
+            balance_label=_("Balance:"),
+            first_name=user_info.get('first_name', _("Kiritilmagan!")),
+            last_name=user_info.get('last_name', _("Kiritilmagan!")),
+            country_code=user_info.get('country_code', ''),
+            phone_number=user_info.get('phone_number', ''),
+            balance=user_info.get('balance', '0')
+        )
+        i18n.ctx_locale.set(user_bot.lang)
         await message.reply(profile_info, reply_markup=user_update_profile_btn())
     except:
         await message.answer(_("Xatolik yuz berdi,Iltimos keyinroq urinib ko'ring!"))

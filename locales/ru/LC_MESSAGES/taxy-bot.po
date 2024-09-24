@@ -214,6 +214,13 @@ msgstr "Другие причины"
 msgid "📱 Telefonni O'zgartirish"
 msgstr "📱 Изменить номер телефона"
 
+msgid "📝 Ismni O'zgartirish"
+msgstr "📝 Изменить Имя"
+
+msgid "📝 Familiyani O'zgartirish"
+msgstr "📝 Изменить Фамилию"
+
+
 msgid "📅Kunlik To'lov"
 msgstr "📅Ежедневный платеж"
 
@@ -233,6 +240,8 @@ msgid "🚕 Moshina Tekshiruvi"
 msgstr "🚕Проверка автомобиля"
 
 
+
+
 msgid "📊 Status"
 msgstr "📊Статус"
 
@@ -247,3 +256,55 @@ msgstr "<b>Последние 10 платежей\n\n👤ID пользовате
 
 msgid "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {date} {time}\n\n"
 msgstr "<b>💲Тип платежа:</b> {payment_type}\n<b>💵 Сумма:</b> {amount_value}\n<b>📅 Дата платежа:</b> {date} {time}\n\n"
+
+msgid "Tekshiruvni tanlang 👇"
+msgstr "Выберите проверку 👇"
+
+msgid "To'lovingiz muvaffaqiyatli amalga oshirildi! Miqdor: {amount} {currency}."
+msgstr "Ваш платеж был успешно завершен! Сумма: {amount} {currency}."
+
+msgid "Ma'lumotlar serverga saqlanmadi\nTo'lov haqida adminlarga murojat qiling!!"
+msgstr "Данные не были сохранены на сервере\nПожалуйста, свяжитесь с администраторами для получения помощи!"
+
+msgid "Kunlik Obuna"
+msgstr "Ежедневная подписка"
+
+msgid "Kunlik obuna uchun to'lovni amalga oshiring."
+msgstr "Совершите оплату за ежедневную подписку."
+
+msgid "Oylik Obuna"
+msgstr "Месячная подписка"
+
+msgid "Oylik obuna uchun to'lovni amalga oshiring."
+msgstr "Совершите оплату за месячную подписку."
+
+msgid "Server xatoligi!!!"
+msgstr "Ошибка сервера!!!"
+
+msgid "Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning hisob-fakturangiz:"
+msgstr "Вы можете совершить оплату через тестовую карту: `8600 0000 0000 0000`\n\nВот ваш счёт-фактура:"
+
+msgid "<b>Iltimos, moshina rasmlarini yuboring (5 tagacha).\n\nNamuna sifatida quyidagi rasmga qarang☝️\n\n❗️Eslatma: Rasmlarni 1 tadan yuboring!</b>"
+msgstr "<b>Пожалуйста, отправьте фотографии автомобиля (до 5).\n\nПосмотрите на изображение ниже как пример☝️\n\n❗️Примечание: Отправляйте фотографии по одной!</b>"
+
+msgid "Ism:"
+msgstr "Имя:"
+
+msgid "Familiya:"
+msgstr "Фамилия:"
+
+msgid "Telefon:"
+msgstr "📱Телефон:"
+
+msgid "Balance:"
+msgstr "💰Баланс:"
+
+msgid "Kiritilmagan!"
+msgstr "Не указано!"
+
+msgid "Tasdiqlashga yuborilgan"
+msgstr "Не подтверждено"
+
+msgid "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
+msgstr "Проверка: 🚕 Проверка автомобиля\nСтатус: {status_machine}\nПричина: {rejection_reason_machine}\n\nПроверка: 👤 Проверка внешности\nСтатус: {status_face}\nПричина: {rejection_reason_face}"
+

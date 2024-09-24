@@ -256,3 +256,56 @@ msgstr "<b>Last 10 payments\n\n👤User ID:</b>{user_id}\n"
 
 msgid "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {date} {time}\n\n"
 msgstr "<b>💲Payment Type:</b> {payment_type}\n<b>💵 Amount:</b> {amount_value}\n<b>📅 Payment Date:</b> {date} {time}\n\n"
+
+msgid "Tekshiruvni tanlang 👇"
+msgstr "Select verification 👇"
+
+msgid "To'lovingiz muvaffaqiyatli amalga oshirildi! Miqdor: {amount} {currency}."
+msgstr "Your payment was successfully processed! Amount: {amount} {currency}."
+
+msgid "Ma'lumotlar serverga saqlanmadi\nTo'lov haqida adminlarga murojat qiling!!"
+msgstr "Data was not saved to the server\nPlease contact the admins for assistance!"
+
+msgid "Kunlik Obuna"
+msgstr "Daily Subscription"
+
+msgid "Kunlik obuna uchun to'lovni amalga oshiring."
+msgstr "Make a payment for the daily subscription."
+
+msgid "Oylik Obuna"
+msgstr "Monthly Subscription"
+
+msgid "Oylik obuna uchun to'lovni amalga oshiring."
+msgstr "Make a payment for the monthly subscription."
+
+msgid "Server xatoligi!!!"
+msgstr "Server error!!!"
+
+msgid "Quyidagi test karta orqali to'lovni amalga oshirishingiz mumkin: `8600 0000 0000 0000`\n\nMana sizning hisob-fakturangiz:"
+msgstr "You can make a payment using the test card: `8600 0000 0000 0000`\n\nHere is your invoice:"
+
+
+msgid "<b>Iltimos, moshina rasmlarini yuboring (5 tagacha).\n\nNamuna sifatida quyidagi rasmga qarang☝️\n\n❗️Eslatma: Rasmlarni 1 tadan yuboring!</b>"
+msgstr "<b>Please send car photos (up to 5).\n\nLook at the image below as an example☝️\n\n❗️Note: Send photos one by one!</b>"
+
+msgid "Ism:"
+msgstr "Name:"
+
+msgid "Familiya:"
+msgstr "Surname:"
+
+msgid "Telefon:"
+msgstr "📱Phone:"
+
+msgid "Balance:"
+msgstr "💰Balance:"
+
+msgid "Kiritilmagan!"
+msgstr "Not Provided!"
+
+msgid "Tasdiqlashga yuborilgan"
+msgstr "Not submitted"
+
+
+msgid "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
+msgstr "Check: 🚕 Vehicle Inspection\nStatus: {status_machine}\nReason: {rejection_reason_machine}\n\nCheck: 👤 Appearance Inspection\nStatus: {status_face}\nReason: {rejection_reason_face}"
