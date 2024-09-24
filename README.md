@@ -1,4 +1,6 @@
 # imkaan_bot
+![Image Description](https://xiteb.com/taxiapp/assets/img/ab-img1.png)
+
 
 Ushbu loyiha sizning botingizni o'rnatish va ishga tushirish uchun zaruriy qadamlarni taqdim etadi.
 
