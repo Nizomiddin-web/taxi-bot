@@ -14,7 +14,7 @@ Ushbu loyiha sizning botingizni o'rnatish va ishga tushirish uchun zaruriy qadam
 1. **Loyihani klonlash:**
 
    ```bash
-   git clone [https://github.com/username/repository.git](https://github.com/Nizomiddin-web/taxi-bot.git)
+   git clone https://github.com/Nizomiddin-web/taxi-bot.git
    cd taxi-bot
 
 2. **Virtual Muhit yaratish**
