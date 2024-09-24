@@ -1,0 +1,256 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: uz\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+msgid "So'rov topilmadi!"
+msgstr "So'rov topilmadi!"
+
+msgid "Ulanish Hosil qilindi!"
+msgstr "Ulanish hosil qilindi!"
+
+msgid "Admin siz bilan bog'landi❗️"
+msgstr "Admin siz bilan bog'landi❗️"
+
+msgid "Assalomu alaykum\nIsmim:{admin_name}\nQanday savollaringiz bor?"
+msgstr "Assalomu alaykum\nIsmim:{admin_name}\nQanday savollaringiz bor?"
+
+msgid "Assalomu alaykum Admin!!!"
+msgstr "Assalomu alaykum Admin!!!"
+
+msgid "Hush kelibsiz siz ro'yhatdan o'tgansiz"
+msgstr "Xush kelibsiz, siz ro'yhatdan o'tgansiz"
+
+msgid "Telefon raqamingizni yuborish tugmasini bosing👇"
+msgstr "Telefon raqamingizni yuborish tugmasini bosing👇"
+
+msgid "Yuborilgan SMS CODE ni yozing!"
+msgstr "Yuborilgan SMS CODE ni yozing!"
+
+msgid "Code yuborishda xatolik yuz berdi!"
+msgstr "Code yuborishda xatolik yuz berdi!"
+
+msgid "Telefonr Raqam tizimda topilmadi"
+msgstr "Telefon raqami tizimda topilmadi"
+
+msgid "Xatolik yuz berdi,Iltimos keyinroq urinib ko'ring!"
+msgstr "Xatolik yuz berdi, Iltimos keyinroq urinib ko'ring!"
+
+msgid "Ro'yhatdan o'tdingiz!"
+msgstr "Ro'yhatdan o'tdingiz!"
+
+msgid "SMS CODE noto'gri."
+msgstr "SMS CODE noto'gri."
+
+msgid "💬 Admin bilan Muloqot"
+msgstr "💬 Admin bilan Muloqot"
+
+msgid "Assalomu alaykum {name}\n\nSizda savollar mavjudmi?\nAdminlarimiz bilan bog'lanishni istaysizmi?"
+msgstr "Assalomu alaykum {name}\n\nSizda savollar mavjudmi?\nAdminlarimiz bilan bog'lanishni istaysizmi?"
+
+msgid "Salomat bo'ling!"
+msgstr "Salomat bo'ling!"
+
+msgid "Sizning so'rovingiz qabul qilindi,\n\niltimos navbatni kuting.\n\nAdmin bog'lanishini kuting\n\nChatni to'xtatish uchun pastdagi tugmani bosing👇 "
+msgstr "Sizning so'rovingiz qabul qilindi,\n\niltimos navbatni kuting.\n\nAdmin bog'lanishini kuting\n\nChatni to'xtatish uchun pastdagi tugmani bosing👇 "
+
+msgid "Foydalanuvchi:<a href='tg://user?id={user_id}'>{name}</a>\ndan Muloqot so'rovi keldi"
+msgstr "Foydalanuvchi:<a href='tg://user?id={user_id}'>{name}</a>\ndan Muloqot so'rovi keldi"
+
+msgid "Xatolik yuz berdi iltimos keyinroq urinib ko'ring!"
+msgstr "Xatolik yuz berdi iltimos keyinroq urinib ko'ring!"
+
+msgid "👤 Mening Profilim"
+msgstr "👤 Mening Profilim"
+
+msgid "Yangi 📱telefon raqamingizni kiriting:"
+msgstr "Yangi 📱telefon raqamingizni kiriting:"
+
+msgid "Iltimos, to'g'ri telefon raqamini kiriting.\nMasalan: +998901234567"
+msgstr "Iltimos, to'g'ri telefon raqamini kiriting.\nMasalan: +998901234567"
+
+msgid "Telefon raqamingiz muvaffaqiyatli yangilandi: {new_phone}"
+msgstr "Telefon raqamingiz muvaffaqiyatli yangilandi: {new_phone}"
+
+msgid "Xatolik yuz berdi iltimos keyinroq urinib ko'ring!\n\nEslatma:Siz Boshqa shahsga tegishli raqamni kiritgan bo'lishingiz mumkin!"
+msgstr "Xatolik yuz berdi, iltimos keyinroq urinib ko'ring!\n\nEslatma: Siz Boshqa shahsga tegishli raqamni kiritgan bo'lishingiz mumkin!"
+
+msgid "Yangi ismingizni kiriting:"
+msgstr "Yangi ismingizni kiriting:"
+
+msgid "Ismingiz muvaffaqiyatli yangilandi: {new_first_name}"
+msgstr "Ismingiz muvaffaqiyatli yangilandi: {new_first_name}"
+
+msgid "Familiyangizni kiriting:"
+msgstr "Familiyangizni kiriting:"
+
+msgid "Familiyangiz muvaffaqiyatli yangilandi: {new_last_name}"
+msgstr "Familiyangiz muvaffaqiyatli yangilandi: {new_last_name}"
+
+msgid "👤 Ko'rinish Tekshiruvi"
+msgstr "👤 Ko'rinish Tekshiruvi"
+
+msgid "Siz ro'yhatdan o'tmagansiz!!!\n\nQayta start bosing!!!"
+msgstr "Siz ro'yxatdan o'tmagansiz!!!\n\nQayta start bosing!!!"
+
+msgid "Siz <b>👤 Ko'rinish Tekshiruvi</b>ga Rasm yuborgansiz\n\nRasmlaringiz Tekshiruv Jarayonida..."
+msgstr "Siz <b>👤 Ko'rinish Tekshiruvi</b>ga Rasm yuborgansiz\n\nRasmlaringiz Tekshiruv Jarayonida..."
+
+msgid "Siz Kunlik<b>👤 Ko'rinish Tekshiruvi</b>dan O'tgansiz!\n\nOq yo'l!!!"
+msgstr "Siz Kunlik<b>👤 Ko'rinish Tekshiruvi</b>dan O'tgansiz!\n\nOq yo'l!!!"
+
+msgid "<b>Iltimos, Ko'rinishingiz rasmlarini yuboring (5 tagacha).\n\nNamuna sifatida quyidagi rasmga qarang☝️\n\n❗️Eslatma: Rasmlarni 1 tadan yuboring!</b>"
+msgstr "<b>Iltimos, Ko'rinishingiz rasmlarini yuboring (5 tagacha).\n\nNamuna sifatida quyidagi rasmga qarang☝️\n\n❗️Eslatma: Rasmlarni 1 tadan yuboring!</b>"
+
+msgid "{img_len}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!"
+msgstr "{img_len}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!"
+
+msgid "Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm yuboring!"
+msgstr "Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm yuboring!"
+
+msgid "Rasmlarni document(file) shaklida yuboring!"
+msgstr "Rasmlarni document(file) shaklida yuboring!"
+
+msgid "Yana Rasm yuboring!"
+msgstr "Yana Rasm yuboring!"
+
+msgid "Rasmlar tekshiruvga yuborildi!"
+msgstr "Rasmlar tekshiruvga yuborildi!"
+
+msgid "<b>Tekshiruvga yuborishni bekor qildingiz</b>"
+msgstr "<b>Tekshiruvga yuborishni bekor qildingiz</b>"
+
+msgid "💬Chatni to'xtatish"
+msgstr "💬Chatni to'xtatish"
+
+msgid "Sizning chatingiz to'xtatildi. Savollaringiz bo'lsa, yana yozishingiz mumkin."
+msgstr "Sizning chatingiz to'xtatildi. Savollaringiz bo'lsa, yana yozishingiz mumkin."
+
+msgid "Chat to'xtatildi!"
+msgstr "Chat to'xtatildi!"
+
+msgid "Foydalanuvchi chatni to'xtatdi."
+msgstr "Foydalanuvchi chatni to'xtatdi."
+
+msgid "Sizda hech qanday faol chat mavjud emas."
+msgstr "Sizda hech qanday faol chat mavjud emas."
+
+msgid "Aktiv muloqot topilmadi."
+msgstr "Aktiv muloqot topilmadi."
+
+msgid "Xatolik yuz berdi."
+msgstr "Xatolik yuz berdi."
+
+msgid "Xatolik yuz berdi!"
+msgstr "Xatolik yuz berdi!"
+
+msgid "🔙Ortga"
+msgstr "🔙Ortga"
+
+msgid "Asosiy bo'lim"
+msgstr "Asosiy bo'lim"
+
+msgid "📖 Manual/FAQ"
+msgstr "📖 Manual/FAQ"
+
+msgid "Qoidalar va Eng ko'p beriladigan savollarga javoblar"
+msgstr "Qoidalar va Eng ko'p beriladigan savollarga javoblar"
+
+msgid "Tasdiqlashga yuborilmagan"
+msgstr "Tasdiqlashga yuborilmagan"
+
+msgid "Tekshirilmoqda"
+msgstr "Tekshirilmoqda"
+
+msgid "Tasdiqlangan✅"
+msgstr "Tasdiqlangan✅"
+
+msgid "Rad etilgan❌"
+msgstr "Rad etilgan❌"
+
+msgid "Xatolik yuz berdi.\nIltimos keyinroq urinib ko'ring!"
+msgstr "Xatolik yuz berdi.\nIltimos keyinroq urinib ko'ring!"
+
+msgid "Siz ro'yhatdan o'tmagansiz!!!\n\nQayta /start bosing!!!"
+msgstr "Siz ro'yhatdan o'tmagansiz!!!\n\nQayta /start bosing!!!"
+
+msgid "Ha Istayman✅"
+msgstr "Ha, Istayman✅"
+
+msgid "Yo'q, Rahmat❌"
+msgstr "Yo'q, Rahmat❌"
+
+msgid "🖼Rasm Qo'shish➕"
+msgstr "🖼Rasm Qo'shish➕"
+
+msgid "Yakunlash✅"
+msgstr "Yakunlash✅"
+
+msgid "Bekor Qilish🪓"
+msgstr "Bekor Qilish🪓"
+
+msgid "Approved✅"
+msgstr "Tasdiqlangan✅"
+
+msgid "Rejected❌"
+msgstr "Rad etilgan❌"
+
+msgid "Rasmlar aniq emas"
+msgstr "Rasmlar aniq emas"
+
+msgid "Rasmlar to'liq emas"
+msgstr "Rasmlar to'liq emas"
+
+msgid "Rasmlar noto'g'ri formatda"
+msgstr "Rasmlar noto'g'ri formatda"
+
+msgid "Rasmlar sifatli emas"
+msgstr "Rasmlar sifatli emas"
+
+msgid "Boshqa sabablar"
+msgstr "Boshqa sabablar"
+
+msgid "📱 Telefonni O'zgartirish"
+msgstr "📱 Telefonni O'zgartirish"
+
+msgid "📝 Ismni O'zgartirish"
+msgstr "📝 Ismni O'zgartirish"
+
+msgid "📝 Familiyani O'zgartirish"
+msgstr "📝 Familiyani O'zgartirish"
+
+
+msgid "📅Kunlik To'lov"
+msgstr "📅Kunlik To'lov"
+
+msgid "📆Oylik To'lov"
+msgstr "📆Oylik To'lov"
+
+msgid "📁To'lovlar Tarixi"
+msgstr "📁To'lovlar Tarixi"
+
+msgid "📅 Kunlik Tekshiruv"
+msgstr "📅 Kunlik Tekshiruv"
+
+msgid "💳 Abonent To'lovlari"
+msgstr "💳 Abonent To'lovlari"
+
+msgid "🚕 Moshina Tekshiruvi"
+msgstr "🚕 Moshina Tekshiruvi"
+
+msgid "📊 Status"
+msgstr "📊 Status"
+
+msgid "📱Telefon raqamni yuborish"
+msgstr "📱Telefon raqamni yuborish"
+
+msgid "Til o'zgartirildi."
+msgstr "Til o'zgartirildi."
+
+msgid "<b>Ohirgi 10 kunlik to'lovlar\n\n👤User ID:</b>{user_id}\n"
+msgstr "<b>Ohirgi 10 kunlik to'lovlar\n\n👤User ID:</b>{user_id}\n"
+
+msgid "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {date} {time}\n\n"
+msgstr "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {date} {time}\n\n"

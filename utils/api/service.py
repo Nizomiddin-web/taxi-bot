@@ -54,9 +54,10 @@ class UserService:
         return False
 
     @classmethod
-    def update_user_verify(cls, tg_id, phone, verification_code):
+    def update_user_verify(cls, tg_id, country_code, phone, verification_code):
         URL = f"{IP}/users/{tg_id}/"
         data = {
+            "country_code": country_code,
             "phone_number": str(phone),
             "verify_code": str(verification_code)
         }
@@ -211,3 +212,37 @@ class ChatLogService:
             "message": message
         }
         return requests.post(URL, data=data)
+
+
+class DemoService:
+    @classmethod
+    def demo_user(cls, country_code, phone_number):
+        URL = f"{IP}/demo-data/{country_code}/{phone_number}/"
+        return requests.get(URL)
+    @classmethod
+    def parse_phone_number(cls, phone_number):
+        # Telefon raqamini tozalash (bo'shliq va '+' belgilarini olib tashlash)
+        cleaned_number = phone_number.replace('+', '').replace(' ', '')
+
+        # Country code va phone numberni ajratib olish
+        if cleaned_number.startswith('998'):  # O'zbekiston uchun misol
+            country_code = '+998'
+            phone_number = cleaned_number[3:]  # +998 dan keyin 9 ta raqam phone_number bo'ladi
+        else:
+            # Country code ni aniqlash uchun boshqa mamlakat kodlarini qo'shishingiz mumkin
+            country_code = cleaned_number[:-9]  # Phone numberning oxirgi 9 ta raqami
+            phone_number = cleaned_number[-9:]  # Oxirgi 9 ta raqamni phone_number deb olish
+
+        return country_code, phone_number
+
+    @classmethod
+    def is_have_user(cls, tg_id, phone_number, verification_code):
+        country_code, phone = cls.parse_phone_number(phone_number=phone_number)
+        res = cls.demo_user(country_code=country_code, phone_number=phone)
+        # data = session.query(DemoData).filter(DemoData.phone_number == cleaned_number).first()
+        # is_phone = UserService.get_user_with_phone(phone=phone_number)
+        if res.status_code == 200:
+            UserService.update_user_verify(tg_id=tg_id, country_code=country_code, phone=phone,
+                                           verification_code=verification_code)
+            return True
+        return False

@@ -1,43 +1,63 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-mainMenu = ReplyKeyboardMarkup(
-    keyboard=[
-        [
-            KeyboardButton(text="📅 Kunlik Tekshiruv"),
-            KeyboardButton(text="💳 Abonent To'lovlari"),
-        ],
-        [
-            KeyboardButton(text="💬 Admin bilan Muloqot")
-        ],
-        [
-            KeyboardButton(text="👤 Mening Profilim"),
-            KeyboardButton(text="📖 Manual/FAQ")
-        ]
-    ],
-    resize_keyboard=True
-)
+from loader import i18n
 
-car_check_menu = ReplyKeyboardMarkup(
-    keyboard=[
-        [
-            KeyboardButton(text="🚕 Moshina Tekshiruvi"),
-            KeyboardButton(text="👤 Ko'rinish Tekshiruvi"),
-        ],
-        [
-            KeyboardButton(text="📊 Status")
-        ],
-        [
-            KeyboardButton(text="🔙Ortga")
-        ]
-    ],
-    resize_keyboard=True
-)
+_ = i18n.gettext
 
-bekor_qilish = ReplyKeyboardMarkup(
-    keyboard=[
-        [
-            KeyboardButton(text="💬Chatni to'xtatish")
-        ]
-    ],
-    resize_keyboard=True
-)
+
+def mainMenu():
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_("📅 Kunlik Tekshiruv")),
+                KeyboardButton(text=_("💳 Abonent To'lovlari")),
+            ],
+            [
+                KeyboardButton(text=_("💬 Admin bilan Muloqot"))
+            ],
+            [
+                KeyboardButton(text=_("👤 Mening Profilim")),
+                KeyboardButton(text="📖 Manual/FAQ")
+            ]
+        ],
+        resize_keyboard=True
+    )
+
+
+def car_check_menu():
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_("🚕 Moshina Tekshiruvi")),
+                KeyboardButton(text=_("👤 Ko'rinish Tekshiruvi")),
+            ],
+            [
+                KeyboardButton(text="📊 Status")
+            ],
+            [
+                KeyboardButton(text=_("🔙Ortga"))
+            ]
+        ],
+        resize_keyboard=True)
+
+
+def bekor_qilish():
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_("💬Chatni to'xtatish"))
+            ]
+        ],
+        resize_keyboard=True
+    )
+
+
+def send_contact():
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_("📱Telefon raqamni yuborish"), request_contact=True)
+            ]
+        ],
+        resize_keyboard=True,
+    )

@@ -1,17 +1,21 @@
+
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+from loader import i18n
+
+_ = i18n.gettext
 inK = InlineKeyboardButton
 
 ask_add_car_photo = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            inK(text="🖼Rasm Qo'shish➕", callback_data="photo_add")
+            inK(text=_("🖼Rasm Qo'shish➕"), callback_data="photo_add")
         ],
         [
-            inK(text="Yakunlash✅", callback_data="photo_end")
+            inK(text=_("Yakunlash✅"), callback_data="photo_end")
         ],
         [
-            inK(text="Bekor Qilish🪓", callback_data="photo_destroy")
+            inK(text=_("Bekor Qilish🪓"), callback_data="photo_destroy")
         ]
     ]
 )
@@ -19,10 +23,10 @@ ask_add_car_photo = InlineKeyboardMarkup(
 end_ask_add_car_photo = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            inK(text="Yakunlash✅", callback_data="photo_end")
+            inK(text=_("Yakunlash✅"), callback_data="photo_end")
         ],
         [
-            inK(text="Bekor Qilish🪓", callback_data="photo_destroy")
+            inK(text=_("Bekor Qilish🪓"), callback_data="photo_destroy")
         ]
     ]
 )
@@ -50,9 +54,9 @@ def admin_review_photo(user_id, check_type):
 
 def user_update_profile_btn():
     btnInl = InlineKeyboardMarkup(row_width=2)
-    update_phone_button = InlineKeyboardButton("📱 Telefonni O'zgartirish", callback_data=f"update_phone")
-    update_first_name_button = InlineKeyboardButton("📝 Ismni O'zgartirish", callback_data=f"update_first_name")
-    update_last_name_button = InlineKeyboardButton("📝 Familiyani O'zgartirish",
+    update_phone_button = InlineKeyboardButton(_("📱 Telefonni O'zgartirish"), callback_data=f"update_phone")
+    update_first_name_button = InlineKeyboardButton(_("📝 Ismni O'zgartirish"), callback_data=f"update_first_name")
+    update_last_name_button = InlineKeyboardButton(_("📝 Familiyani O'zgartirish"),
                                                    callback_data=f"update_last_name")
     delete = inK(text="❌", callback_data="delete")
     btnInl.insert(update_phone_button)

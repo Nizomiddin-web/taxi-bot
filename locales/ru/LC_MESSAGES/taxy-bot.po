@@ -1,0 +1,249 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "So'rov topilmadi!"
+msgstr "Запрос не найден!"
+
+msgid "Ulanish Hosil qilindi!"
+msgstr "Связь установлена!"
+
+msgid "Admin siz bilan bog'landi❗️"
+msgstr "Администратор связался с вами❗️"
+
+msgid "Assalomu alaykum\nIsmim:{admin_name}\nQanday savollaringiz bor?"
+msgstr "Здравствуйте\nМеня зовут:{admin_name}\nКакие у вас вопросы?"
+
+msgid "Assalomu alaykum Admin!!!"
+msgstr "Здравствуйте, Администратор!!!"
+
+msgid "Hush kelibsiz siz ro'yhatdan o'tgansiz"
+msgstr "Добро пожаловать, вы зарегистрированы"
+
+msgid "Telefon raqamingizni yuborish tugmasini bosing👇"
+msgstr "Нажмите кнопку, чтобы отправить ваш номер телефона👇"
+
+msgid "Yuborilgan SMS CODE ni yozing!"
+msgstr "Введите отправленный SMS КОД!"
+
+msgid "Code yuborishda xatolik yuz berdi!"
+msgstr "Ошибка при отправке кода!"
+
+msgid "Telefonr Raqam tizimda topilmadi"
+msgstr "Номер телефона не найден в системе"
+
+msgid "Xatolik yuz berdi,Iltimos keyinroq urinib ko'ring!"
+msgstr "Произошла ошибка, пожалуйста, попробуйте позже!"
+
+msgid "Ro'yhatdan o'tdingiz!"
+msgstr "Вы зарегистрированы!"
+
+msgid "SMS CODE noto'gri."
+msgstr "Неправильный SMS КОД."
+
+msgid "💬 Admin bilan Muloqot"
+msgstr "💬 Связь с администратором"
+
+msgid "Assalomu alaykum {name}\n\nSizda savollar mavjudmi?\nAdminlarimiz bilan bog'lanishni istaysizmi?"
+msgstr "Здравствуйте {name}\n\nУ вас есть вопросы?\nХотите связаться с нашими администраторами?"
+
+msgid "Salomat bo'ling!"
+msgstr "Будьте здоровы!"
+
+msgid "Sizning so'rovingiz qabul qilindi,\n\niltimos navbatni kuting.\n\nAdmin bog'lanishini kuting\n\nChatni to'xtatish uchun pastdagi tugmani bosing👇 "
+msgstr "Ваш запрос принят,\n\nпожалуйста, ждите.\n\nОжидайте связи с администратором\n\nЧтобы остановить чат, нажмите кнопку ниже👇 "
+
+msgid "Foydalanuvchi:<a href='tg://user?id={user_id}'>{name}</a>\ndan Muloqot so'rovi keldi"
+msgstr "Пользователь:<a href='tg://user?id={user_id}'>{name}</a> отправил запрос на связь"
+
+msgid "Xatolik yuz berdi iltimos keyinroq urinib ko'ring!"
+msgstr "Произошла ошибка, пожалуйста, попробуйте позже!"
+
+msgid "👤 Mening Profilim"
+msgstr "👤 Мой Профиль"
+
+msgid "Yangi 📱telefon raqamingizni kiriting:"
+msgstr "Введите ваш новый 📱номер телефона:"
+
+msgid "Iltimos, to'g'ri telefon raqamini kiriting.\nMasalan: +998901234567"
+msgstr "Пожалуйста, введите корректный номер телефона.\nНапример: +998901234567"
+
+msgid "Telefon raqamingiz muvaffaqiyatli yangilandi: {new_phone}"
+msgstr "Ваш номер телефона успешно обновлен: {new_phone}"
+
+msgid "Xatolik yuz berdi iltimos keyinroq urinib ko'ring!\n\nEslatma:Siz Boshqa shahsga tegishli raqamni kiritgan bo'lishingiz mumkin!"
+msgstr "Произошла ошибка, пожалуйста, попробуйте позже!\n\nПримечание: Вы могли ввести номер, принадлежащий другому лицу!"
+
+msgid "Yangi ismingizni kiriting:"
+msgstr "Введите ваше новое имя:"
+
+msgid "Ismingiz muvaffaqiyatli yangilandi: {new_first_name}"
+msgstr "Ваше имя успешно обновлено: {new_first_name}"
+
+msgid "Familiyangizni kiriting:"
+msgstr "Введите вашу новую фамилию:"
+
+msgid "Familiyangiz muvaffaqiyatli yangilandi: {new_last_name}"
+msgstr "Ваша фамилия успешно обновлена: {new_last_name}"
+
+msgid "👤 Ko'rinish Tekshiruvi"
+msgstr "👤 Проверка внешности"
+
+msgid "Siz ro'yhatdan o'tmagansiz!!!\n\nQayta start bosing!!!"
+msgstr "Вы не зарегистрированы!!!\n\nНажмите start снова!!!"
+
+msgid "Siz <b>👤 Ko'rinish Tekshiruvi</b>ga Rasm yuborgansiz\n\nRasmlaringiz Tekshiruv Jarayonida..."
+msgstr "Вы отправили фото для <b>👤 Проверка внешности</b>\n\nВаши фотографии на проверке..."
+
+msgid "Siz Kunlik<b>👤 Ko'rinish Tekshiruvi</b>dan O'tgansiz!\n\nOq yo'l!!!"
+msgstr "Вы прошли ежедневную <b>👤 Проверка внешности</b>!\n\nУдачи!!!"
+
+msgid "<b>Iltimos, Ko'rinishingiz rasmlarini yuboring (5 tagacha).\n\nNamuna sifatida quyidagi rasmga qarang☝️\n\n❗️Eslatma: Rasmlarni 1 tadan yuboring!</b>"
+msgstr "<b>Пожалуйста, отправьте свои фотографии (до 5).\n\nОбразец на фото выше☝️\n\n❗️Примечание: Отправляйте по одной фотографии!</b>"
+
+msgid "{img_len}/5 rasmlar yuklandi.\nBoshqa rasm qabul qilinmaydi!"
+msgstr "{img_len}/5 фотографий загружено.\nДополнительные фото не принимаются!"
+
+msgid "Rasm qabul qilinmadi\n\nRasm olingan vaqt 30 daqiqadan oshmasligi shart!\n\nBoshqa rasm yuboring!"
+msgstr "Фотография не принята\n\nФото должно быть сделано не позднее 30 минут назад!\n\nОтправьте другую фотографию!"
+
+msgid "Rasmlarni document(file) shaklida yuboring!"
+msgstr "Отправьте фотографии в формате документа (файл)!"
+
+msgid "Yana Rasm yuboring!"
+msgstr "Отправьте ещё одно фото!"
+
+msgid "Rasmlar tekshiruvga yuborildi!"
+msgstr "Фотографии отправлены на проверку!"
+
+msgid "<b>Tekshiruvga yuborishni bekor qildingiz</b>"
+msgstr "<b>Вы отменили отправку на проверку</b>"
+
+msgid "💬Chatni to'xtatish"
+msgstr "💬Остановить чат"
+
+msgid "Sizning chatingiz to'xtatildi. Savollaringiz bo'lsa, yana yozishingiz mumkin."
+msgstr "Ваш чат был остановлен. Если у вас есть вопросы, вы можете снова написать."
+
+msgid "Chat to'xtatildi!"
+msgstr "Чат остановлен!"
+
+msgid "Foydalanuvchi chatni to'xtatdi."
+msgstr "Пользователь остановил чат."
+
+msgid "Sizda hech qanday faol chat mavjud emas."
+msgstr "У вас нет активных чатов."
+
+msgid "Aktiv muloqot topilmadi."
+msgstr "Активный диалог не найден."
+
+msgid "Xatolik yuz berdi."
+msgstr "Произошла ошибка."
+
+msgid "Xatolik yuz berdi!"
+msgstr "Произошла ошибка!"
+
+msgid "🔙Ortga"
+msgstr "🔙Назад"
+
+msgid "Asosiy bo'lim"
+msgstr "Главное меню"
+
+msgid "📖 Manual/FAQ"
+msgstr "📖 Руководство/FAQ"
+
+msgid "Qoidalar va Eng ko'p beriladigan savollarga javoblar"
+msgstr "Правила и ответы на часто задаваемые вопросы"
+
+msgid "Tasdiqlashga yuborilmagan"
+msgstr "Не отправлено на подтверждение"
+
+msgid "Tekshirilmoqda"
+msgstr "На проверке"
+
+msgid "Tasdiqlangan✅"
+msgstr "Подтверждено✅"
+
+msgid "Rad etilgan❌"
+msgstr "Отклонено❌"
+
+msgid "Xatolik yuz berdi.\nIltimos keyinroq urinib ko'ring!"
+msgstr "Произошла ошибка.\nПожалуйста, попробуйте позже!"
+
+msgid "Siz ro'yhatdan o'tmagansiz!!!\n\nQayta /start bosing!!!"
+msgstr "Вы не зарегистрированы!!!\n\nНажмите /start еще раз!!!"
+
+msgid "Ha Istayman✅"
+msgstr "Да, я хочу✅"
+
+msgid "Yo'q, Rahmat❌"
+msgstr "Нет, спасибо❌"
+
+msgid "🖼Rasm Qo'shish➕"
+msgstr "🖼Добавить фото➕"
+
+msgid "Yakunlash✅"
+msgstr "Завершить✅"
+
+msgid "Bekor Qilish🪓"
+msgstr "Отменить🪓"
+
+msgid "Approved✅"
+msgstr "Одобрено✅"
+
+msgid "Rejected❌"
+msgstr "Отклонено❌"
+
+msgid "Rasmlar aniq emas"
+msgstr "Фотографии не четкие"
+
+msgid "Rasmlar to'liq emas"
+msgstr "Фотографии не полные"
+
+msgid "Rasmlar noto'g'ri formatda"
+msgstr "Фотографии в неправильном формате"
+
+msgid "Rasmlar sifatli emas"
+msgstr "Фотографии некачественные"
+
+msgid "Boshqa sabablar"
+msgstr "Другие причины"
+
+msgid "📱 Telefonni O'zgartirish"
+msgstr "📱 Изменить номер телефона"
+
+msgid "📅Kunlik To'lov"
+msgstr "📅Ежедневный платеж"
+
+msgid "📆Oylik To'lov"
+msgstr "📆Ежемесячный платеж"
+
+msgid "📁To'lovlar Tarixi"
+msgstr "📁История платежей"
+
+msgid "📅 Kunlik Tekshiruv"
+msgstr "📅Ежедневная проверка"
+
+msgid "💳 Abonent To'lovlari"
+msgstr "💳Оплата подписки"
+
+msgid "🚕 Moshina Tekshiruvi"
+msgstr "🚕Проверка автомобиля"
+
+
+msgid "📊 Status"
+msgstr "📊Статус"
+
+msgid "📱Telefon raqamni yuborish"
+msgstr "📱Отправить номер телефона"
+
+msgid "Til o'zgartirildi."
+msgstr "Язык изменен."
+
+msgid "<b>Ohirgi 10 kunlik to'lovlar\n\n👤User ID:</b>{user_id}\n"
+msgstr "<b>Последние 10 платежей\n\n👤ID пользователя:</b>{user_id}\n"
+
+msgid "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {date} {time}\n\n"
+msgstr "<b>💲Тип платежа:</b> {payment_type}\n<b>💵 Сумма:</b> {amount_value}\n<b>📅 Дата платежа:</b> {date} {time}\n\n"

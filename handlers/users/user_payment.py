@@ -7,30 +7,46 @@ from aiogram.types import ContentTypes
 
 from filters import IsPrivate
 from keyboards.inline.payment_inline import payment_keyboard
-from loader import dp, bot
+from loader import dp, bot, i18n
 from utils.api.service import AmountService, PaymentService
+from utils.db_api.Service.user import UserBotService
 
+_ = i18n.gettext
 PAYME_PROVIDER_TOKEN = "371317599:TEST:1726730149774"
 CLICK_PROVIDER_TOKEN = "398062629:TEST:999999999_F91D8F69C042267444B74CC0B3C747757EB0E065"
 
 
-@dp.message_handler(IsPrivate(), text="💳 Abonent To'lovlari")
+@dp.message_handler(IsPrivate(), text=["💳 Abonent To'lovlari", "💳Оплата подписки", "💳 Subscription Payments"])
 async def user_payment(message: types.Message):
-    await message.reply("To'lov bo'limi", reply_markup=payment_keyboard())
+    user_bot = UserBotService.find_or_create(message.from_user.id)
+    i18n.ctx_locale.set(user_bot.lang)
+    await message.reply(_("To'lov bo'limi"), reply_markup=payment_keyboard())
 
 
 @dp.callback_query_handler(text="payment_history")
 async def user_payment(call: types.CallbackQuery):
+    user_bot = UserBotService.find_or_create(call.from_user.id)
+    i18n.ctx_locale.set(user_bot.lang)
     result = PaymentService.get_history(telegram_id=call.from_user.id)
     if result.status_code == 200:
-        text = f"<b>Ohirgi 10 kunlik to'lovlar\n\n👤User ID:{call.from_user.id}</b>\n"
+        text = _("<b>Ohirgi 10 kunlik to'lovlar\n\n👤User ID:</b>{user_id}\n").format(user_id=call.from_user.id)
+
         for i in result.json():
             datetime_object = datetime.fromisoformat(i['payment_date'])
 
             # Sana va vaqtni ajratib olish
             date_part = datetime_object.strftime("%Y-%m-%d")  # Sana qismi
             time_part = datetime_object.strftime("%H:%M:%S")  # Vaqt qismi
-            text += f"<b>💲To'lov turi:</b>{i['payment_type']}\n<b>💵Miqdori:</b>{i['amount_value']}\n<b>📅To'lov sanasi:</b>{date_part} {time_part}\n\n"
+
+            # Dinamik qismni lokalizatsiya qiling
+            text += _(
+                "<b>💲To'lov turi:</b> {payment_type}\n<b>💵 Miqdori:</b> {amount_value}\n<b>📅 To'lov sanasi:</b> {"
+                "date} {time}\n\n").format(
+                payment_type=i['payment_type'],
+                amount_value=i['amount_value'],
+                date=date_part,
+                time=time_part
+            )
         await call.message.edit_text(text)
 
 
