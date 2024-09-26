@@ -2,8 +2,18 @@ from environs import Env
 
 # environs kutubxonasidan foydalanish
 env = Env()
-env.read_env()
+mode = env.str("MODE", "development")
+
+# MODE ga qarab tegishli .env faylni yuklaymiz
+if mode == "development":
+    env.read_env(".env.development")
+elif mode == "production":
+    env.read_env(".env.production")
+else:
+    raise ValueError("Noto'g'ri MODE qiymati belgilangan")
+
 CHANNELS = []
+
 # .env fayl ichidan quyidagilarni o'qiymiz
 BOT_TOKEN = env.str("BOT_TOKEN")  # Bot token
 
