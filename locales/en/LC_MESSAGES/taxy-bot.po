@@ -303,9 +303,6 @@ msgstr "💰Balance:"
 msgid "Kiritilmagan!"
 msgstr "Not Provided!"
 
-msgid "Tasdiqlashga yuborilgan"
-msgstr "Not submitted"
 
-
-msgid "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
-msgstr "Check: 🚕 Vehicle Inspection\nStatus: {status_machine}\nReason: {rejection_reason_machine}\n\nCheck: 👤 Appearance Inspection\nStatus: {status_face}\nReason: {rejection_reason_face}"
+msgid "<b>Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}</b>"
+msgstr "<b>Check: 🚕 Vehicle Inspection\nStatus: {status_machine}\nReason: {rejection_reason_machine}\n\nCheck: 👤 Appearance Inspection\nStatus: {status_face}\nReason: {rejection_reason_face}</b>"

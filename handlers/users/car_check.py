@@ -49,13 +49,13 @@ async def car_check_start(message: types.Message):
             result_machine = result_machine.json()
             result_face = result_face.json()
             status_machine_text = _(
-                "Tasdiqlashga yuborilgan" if result_machine['status'] == 'not_submitted' else
+                "Tasdiqlashga yuborilmagan" if result_machine['status'] == 'not_submitted' else
                 "Tekshirilmoqda" if result_machine['status'] == 'pending' else
                 "Tasdiqlangan✅" if result_machine['status'] == 'approved' else
                 "Rad etilgan❌"
             )
             status_face_text = _(
-                "Tasdiqlashga yuborilgan" if result_face['status'] == 'not_submitted' else
+                "Tasdiqlashga yuborilmagan" if result_face['status'] == 'not_submitted' else
                 "Tekshirilmoqda" if result_face['status'] == 'pending' else
                 "Tasdiqlangan✅" if result_face['status'] == 'approved' else
                 "Rad etilgan❌"

@@ -54,7 +54,7 @@ async def echo(message: types.Message):
                 user_telegram_id = support_request['user']
                 await bot.send_message(chat_id=user_telegram_id,
                                        text=f"Admin:{message.from_user.full_name} \n\n{message.text}",
-                                       reply_markup=bekor_qilish)
+                                       reply_markup=bekor_qilish())
             else:
                 # Foydalanuvchi admin bilan gaplashayotgan bo'lsa
                 admin_telegram_id = support_request['admin']

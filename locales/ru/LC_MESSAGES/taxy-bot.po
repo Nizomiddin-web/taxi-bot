@@ -302,9 +302,7 @@ msgstr "💰Баланс:"
 msgid "Kiritilmagan!"
 msgstr "Не указано!"
 
-msgid "Tasdiqlashga yuborilgan"
-msgstr "Не подтверждено"
 
-msgid "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
-msgstr "Проверка: 🚕 Проверка автомобиля\nСтатус: {status_machine}\nПричина: {rejection_reason_machine}\n\nПроверка: 👤 Проверка внешности\nСтатус: {status_face}\nПричина: {rejection_reason_face}"
+msgid "<b>Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}</b>"
+msgstr "<b>Проверка: 🚕 Проверка автомобиля\nСтатус: {status_machine}\nПричина: {rejection_reason_machine}\n\nПроверка: 👤 Проверка внешности\nСтатус: {status_face}\nПричина: {rejection_reason_face}</b>"
 

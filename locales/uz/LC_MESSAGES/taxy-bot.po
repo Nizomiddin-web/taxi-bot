@@ -300,9 +300,7 @@ msgstr "💰Balance:"
 msgid "Kiritilmagan!"
 msgstr "Kiritilmagan!"
 
-msgid "Tasdiqlashga yuborilgan"
-msgstr "Tasdiqlashga yuborilgan"
 
-msgid "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
-msgstr "Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}"
+msgid "<b>Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}</b>"
+msgstr "<b>Tekshiruv: 🚕 Moshina Tekshiruvi\nStatus: {status_machine}\nSababi: {rejection_reason_machine}\n\nTekshiruv: 👤 Ko'rinish Tekshiruvi\nStatus: {status_face}\nSababi: {rejection_reason_face}</b>"
 
